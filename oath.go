@@ -118,7 +118,7 @@ func (o OATH) OTP(counter uint64) string {
 	}
 
 	h := hmac.New(o.hash, o.key)
-	h.Write(ctr[:])
+	_, _ = h.Write(ctr[:])
 	dt := truncate(h.Sum(nil)) % mod
 	fmtStr := fmt.Sprintf("%%0%dd", o.size)
 	return fmt.Sprintf(fmtStr, dt)

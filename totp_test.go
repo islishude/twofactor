@@ -7,7 +7,6 @@ import (
 )
 
 var rfcTotpKey = []byte("12345678901234567890")
-var rfcTotpStep uint64 = 30
 
 var rfcTotpTests = []struct {
 	Time uint64

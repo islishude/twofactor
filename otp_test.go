@@ -1,8 +1,10 @@
 package twofactor
 
-import "fmt"
-import "io"
-import "testing"
+import (
+	"fmt"
+	"io"
+	"testing"
+)
 
 func TestHOTPString(t *testing.T) {
 	hotp := NewHOTP(nil, 0, 6)
